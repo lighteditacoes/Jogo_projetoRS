@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://sw23vxgxd4jg"]
+
+[ext_resource type="FontFile" uid="uid://dpqkkpxwxwpbu" path="res://upheavtt.ttf" id="1_4fu0i"]
+
+[node name="Button" type="Button"]
+offset_right = 87.0
+offset_bottom = 29.0
+theme_override_fonts/font = ExtResource("1_4fu0i")
+theme_override_font_sizes/font_size = 26
+text = "JOGAR"
