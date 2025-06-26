@@ -164,7 +164,6 @@ _animatedgun = NodePath("Arma/anim_gun")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Arma"]
 scale = Vector2(0.45, 0.45)
 sprite_frames = SubResource("SpriteFrames_tbu6m")
-frame_progress = 0.101483
 
 [node name="anim_gun" type="AnimationPlayer" parent="Arma"]
 libraries = {
