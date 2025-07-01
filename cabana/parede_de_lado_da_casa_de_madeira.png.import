@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c2db7di327fc5"
-path="res://.godot/imported/Gaucho_3.png-a5a7b13e11bd19e7b60664bf0a90c2f6.ctex"
+uid="uid://b1exgcgk4wo7o"
+path="res://.godot/imported/parede_de_lado_da_casa_de_madeira.png-15540e2dd2f7cb897b1d437723a757f0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Gaucho_3.png"
-dest_files=["res://.godot/imported/Gaucho_3.png-a5a7b13e11bd19e7b60664bf0a90c2f6.ctex"]
+source_file="res://cabana/parede_de_lado_da_casa_de_madeira.png"
+dest_files=["res://.godot/imported/parede_de_lado_da_casa_de_madeira.png-15540e2dd2f7cb897b1d437723a757f0.ctex"]
 
 [params]
 

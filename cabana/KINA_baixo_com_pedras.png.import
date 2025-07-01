@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cqtby14akoy88"
-path="res://.godot/imported/sr5z805306686caws3.png-3a7025329f759c305e36e12d16566ac1.ctex"
+uid="uid://drqm1rvq6td1h"
+path="res://.godot/imported/KINA_baixo_com_pedras.png-9ce76830bafbedb0313a140530a05990.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sr5z805306686caws3.png"
-dest_files=["res://.godot/imported/sr5z805306686caws3.png-3a7025329f759c305e36e12d16566ac1.ctex"]
+source_file="res://cabana/KINA_baixo_com_pedras.png"
+dest_files=["res://.godot/imported/KINA_baixo_com_pedras.png-9ce76830bafbedb0313a140530a05990.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ci8jyr60qaa02"
-path="res://.godot/imported/chaodemadeira.png-17d16430af35cb98163ff1b94df8edde.ctex"
+uid="uid://b4porwve28fk7"
+path="res://.godot/imported/parede_de_madeira_de_baixo_com_pedras.png-3418c7d71765b7226446df0714ebd100.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://chaodemadeira.png"
-dest_files=["res://.godot/imported/chaodemadeira.png-17d16430af35cb98163ff1b94df8edde.ctex"]
+source_file="res://cabana/parede_de_madeira_de_baixo_com_pedras.png"
+dest_files=["res://.godot/imported/parede_de_madeira_de_baixo_com_pedras.png-3418c7d71765b7226446df0714ebd100.ctex"]
 
 [params]
 

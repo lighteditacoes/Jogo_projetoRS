@@ -1,13 +1,13 @@
 [gd_scene load_steps=17 format=4 uid="uid://c68vqdb20ten0"]
 
-[ext_resource type="PackedScene" uid="uid://de5ds5s2ivoki" path="res://character.tscn" id="1_bowdc"]
-[ext_resource type="Texture2D" uid="uid://ci8jyr60qaa02" path="res://chaodemadeira.png" id="1_w0f3w"]
-[ext_resource type="Texture2D" uid="uid://b1exgcgk4wo7o" path="res://parede_de_lado_da_casa_de_madeira.png" id="3_1b13l"]
-[ext_resource type="AudioStream" uid="uid://d1qnlnbixe52y" path="res://No Fundo da Grota.mp3" id="3_mtek3"]
-[ext_resource type="Texture2D" uid="uid://btswd1o7wkwsi" path="res://paredecasa.png" id="4_df318"]
-[ext_resource type="Texture2D" uid="uid://dpa1ujl02arrb" path="res://KINA.png" id="4_o7sug"]
-[ext_resource type="Texture2D" uid="uid://drqm1rvq6td1h" path="res://KINA_baixo_com_pedras.png" id="5_ogws0"]
-[ext_resource type="Texture2D" uid="uid://b4porwve28fk7" path="res://parede_de_madeira_de_baixo_com_pedras.png" id="6_k6vq7"]
+[ext_resource type="PackedScene" uid="uid://de5ds5s2ivoki" path="res://cenas/character.tscn" id="1_bowdc"]
+[ext_resource type="Texture2D" uid="uid://ci8jyr60qaa02" path="res://cabana/chaodemadeira.png" id="1_w0f3w"]
+[ext_resource type="Texture2D" uid="uid://b1exgcgk4wo7o" path="res://cabana/parede_de_lado_da_casa_de_madeira.png" id="3_1b13l"]
+[ext_resource type="AudioStream" uid="uid://d1qnlnbixe52y" path="res://audios/No Fundo da Grota.mp3" id="3_mtek3"]
+[ext_resource type="Texture2D" uid="uid://btswd1o7wkwsi" path="res://cabana/paredecasa.png" id="4_df318"]
+[ext_resource type="Texture2D" uid="uid://dpa1ujl02arrb" path="res://cabana/KINA.png" id="4_o7sug"]
+[ext_resource type="Texture2D" uid="uid://drqm1rvq6td1h" path="res://cabana/KINA_baixo_com_pedras.png" id="5_ogws0"]
+[ext_resource type="Texture2D" uid="uid://b4porwve28fk7" path="res://cabana/parede_de_madeira_de_baixo_com_pedras.png" id="6_k6vq7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w0f3w"]
 texture = ExtResource("1_w0f3w")

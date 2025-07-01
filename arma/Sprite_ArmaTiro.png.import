@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dej2g58n2hydu"
-path="res://.godot/imported/Shotgun00.png-8c083a918027db541a3df6ee2770789c.ctex"
+uid="uid://ddib2bp67e58c"
+path="res://.godot/imported/Sprite_ArmaTiro.png-d7335abb37febf693e7aea5e26c392de.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Shotgun00.png"
-dest_files=["res://.godot/imported/Shotgun00.png-8c083a918027db541a3df6ee2770789c.ctex"]
+source_file="res://arma/Sprite_ArmaTiro.png"
+dest_files=["res://.godot/imported/Sprite_ArmaTiro.png-d7335abb37febf693e7aea5e26c392de.ctex"]
 
 [params]
 

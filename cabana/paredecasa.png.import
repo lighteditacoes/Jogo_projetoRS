@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfgt4m3sequff"
-path="res://.godot/imported/Sprite_Arma_1.png-4343faa2bf12486132a4977253ac5c3d.ctex"
+uid="uid://btswd1o7wkwsi"
+path="res://.godot/imported/paredecasa.png-c7613c2aca77b92c32a909984103575a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprite_Arma_1.png"
-dest_files=["res://.godot/imported/Sprite_Arma_1.png-4343faa2bf12486132a4977253ac5c3d.ctex"]
+source_file="res://cabana/paredecasa.png"
+dest_files=["res://.godot/imported/paredecasa.png-c7613c2aca77b92c32a909984103575a.ctex"]
 
 [params]
 

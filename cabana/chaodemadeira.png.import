@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://btswd1o7wkwsi"
-path="res://.godot/imported/paredecasa.png-c9533dd1320e93648ed6d2e072675b3a.ctex"
+uid="uid://ci8jyr60qaa02"
+path="res://.godot/imported/chaodemadeira.png-42034c77302cbc052dfccd977924373f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://paredecasa.png"
-dest_files=["res://.godot/imported/paredecasa.png-c9533dd1320e93648ed6d2e072675b3a.ctex"]
+source_file="res://cabana/chaodemadeira.png"
+dest_files=["res://.godot/imported/chaodemadeira.png-42034c77302cbc052dfccd977924373f.ctex"]
 
 [params]
 

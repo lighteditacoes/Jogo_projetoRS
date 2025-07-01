@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dak0ndn034fjg"
-path="res://.godot/imported/correndo_3.png-a69dff6da11406da94df5edbd8f6d1e2.ctex"
+uid="uid://dpa1ujl02arrb"
+path="res://.godot/imported/KINA.png-8d7d66693d8276ab452463c8e4679ad5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://correndo_3.png"
-dest_files=["res://.godot/imported/correndo_3.png-a69dff6da11406da94df5edbd8f6d1e2.ctex"]
+source_file="res://cabana/KINA.png"
+dest_files=["res://.godot/imported/KINA.png-8d7d66693d8276ab452463c8e4679ad5.ctex"]
 
 [params]
 

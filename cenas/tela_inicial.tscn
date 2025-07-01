@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dwofdec8uggro" path="res://tela_inicial.gd" id="1_8bm7t"]
 [ext_resource type="FontFile" uid="uid://dpqkkpxwxwpbu" path="res://upheavtt.ttf" id="1_g50o1"]
-[ext_resource type="PackedScene" uid="uid://sw23vxgxd4jg" path="res://BotaoInicio.tscn" id="2_8bm7t"]
+[ext_resource type="PackedScene" uid="uid://sw23vxgxd4jg" path="res://cenas/BotaoInicio.tscn" id="2_8bm7t"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_tv8no"]
 line_spacing = 4.0
