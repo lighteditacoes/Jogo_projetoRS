@@ -1,6 +1,5 @@
 extends Node2D
 
-var bullet_scene = preload("res://bullet.tscn")
 var DISTANCIA_FIXA = 21.0
 var _can_attack: bool = true
 var attack_timer = null

@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 var velocidade: float = 200.0
 var direcao_movimento: Vector2 = Vector2.ZERO
-var gun_scene = preload("res://gun.tscn")
+var gun_scene = preload("res://cenas/gun.tscn")
 var gun: Node2D
 var can_move: bool = true
 
