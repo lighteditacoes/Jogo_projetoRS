@@ -1,19 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://d14xlc8d8qfo6"]
-
-[ext_resource type="Script" uid="uid://bsud2tosqqd6j" path="res://bullets.gd" id="1_v8qja"]
-[ext_resource type="Texture2D" uid="uid://7gwckfoif7nd" path="res://sr5zb8993b3634aws3.png" id="2_t4vbm"]
+[gd_scene load_steps=2 format=3 uid="uid://d14xlc8d8qfo6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2b2rl"]
 size = Vector2(5250, 1500)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 scale = Vector2(0.02, 0.02)
-script = ExtResource("1_v8qja")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 rotation = 1.5708
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_t4vbm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(37.5, 1.49012e-06)
