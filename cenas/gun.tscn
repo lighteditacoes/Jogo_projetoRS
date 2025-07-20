@@ -171,20 +171,23 @@ region = Rect2(260, 350, 51, 50)
 animations = [{
 "frames": [],
 "loop": true,
-"name": &"new_animation",
+"name": &"defaut",
 "speed": 5.0
 }, {
 "frames": [{
+"duration": 0.01,
+"texture": null
+}, {
 "duration": 0.5,
 "texture": SubResource("AtlasTexture_aujlb")
 }, {
-"duration": 1.0,
+"duration": 0.5,
 "texture": null
 }, {
 "duration": 0.5,
 "texture": SubResource("AtlasTexture_0plcb")
 }, {
-"duration": 1.0,
+"duration": 0.5,
 "texture": null
 }, {
 "duration": 2.0,
@@ -222,8 +225,9 @@ disabled = true
 one_way_collision_margin = 0.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Arma/Area2D"]
-position = Vector2(24.6667, -2.66667)
+position = Vector2(20.6667, -2.66667)
 rotation = 3.14159
 scale = Vector2(0.7, 0.7)
 sprite_frames = SubResource("SpriteFrames_jxkcj")
 animation = &"shoot"
+frame_progress = 0.503379
