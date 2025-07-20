@@ -1,0 +1,156 @@
+[gd_scene load_steps=4 format=3 uid="uid://fc0r2gajpja8"]
+
+[ext_resource type="FontFile" uid="uid://dpqkkpxwxwpbu" path="res://upheavtt.ttf" id="1_dmlrq"]
+[ext_resource type="Texture2D" uid="uid://bjgssx7h7gh05" path="res://fundo_créditos.jpg" id="1_f7osg"]
+[ext_resource type="Script" uid="uid://beujjptxviahn" path="res://cenas/creditos.gd" id="1_rdysq"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rdysq")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -151.0
+offset_bottom = 151.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_f7osg")
+
+[node name="título" type="Label" parent="."]
+modulate = Color(0.239216, 0.168627, 0.121569, 1)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -115.5
+offset_top = 44.0
+offset_right = 25.5
+offset_bottom = 72.0
+grow_horizontal = 2
+scale = Vector2(1.7748, 2.2)
+theme_override_fonts/font = ExtResource("1_dmlrq")
+theme_override_font_sizes/font_size = 30
+text = "CRÉDITOS"
+
+[node name="programadores" type="Label" parent="."]
+modulate = Color(0.239216, 0.168627, 0.121569, 1)
+layout_mode = 0
+offset_left = 7.0
+offset_top = 179.0
+offset_right = 210.0
+offset_bottom = 202.0
+scale = Vector2(1.32, 1.49562)
+theme_override_fonts/font = ExtResource("1_dmlrq")
+theme_override_font_sizes/font_size = 25
+text = "PROGRAMADORES :"
+
+[node name="Label" type="Label" parent="programadores"]
+layout_mode = 0
+offset_left = 7.96676
+offset_top = 30.0878
+offset_right = 260.967
+offset_bottom = 54.0878
+scale = Vector2(1.20213, 1)
+theme_override_font_sizes/font_size = 17
+text = "-Ruan Lucas dos Santos Freitas"
+
+[node name="Label2" type="Label" parent="programadores"]
+layout_mode = 0
+offset_left = 7.57576
+offset_top = 55.4953
+offset_right = 271.576
+offset_bottom = 79.4953
+scale = Vector2(1.16487, 1)
+theme_override_font_sizes/font_size = 17
+text = "-Valdenicio Souza da Silva Junior"
+
+[node name="DESIGNS" type="Label" parent="."]
+modulate = Color(0.239216, 0.168627, 0.121569, 1)
+layout_mode = 0
+offset_left = 7.0
+offset_top = 324.0
+offset_right = 116.0
+offset_bottom = 347.0
+scale = Vector2(1.56, 1.36)
+theme_override_fonts/font = ExtResource("1_dmlrq")
+theme_override_font_sizes/font_size = 25
+text = "DESIGNS VISUAL :"
+
+[node name="Label" type="Label" parent="DESIGNS"]
+layout_mode = 0
+offset_left = 7.05128
+offset_top = 30.1471
+offset_right = 297.051
+offset_bottom = 54.1471
+scale = Vector2(0.88609, 1.14655)
+theme_override_font_sizes/font_size = 17
+text = "-Jorge Santos do Nascimento Junior"
+
+[node name="Label2" type="Label" parent="DESIGNS"]
+layout_mode = 0
+offset_left = 7.69231
+offset_top = 58.8235
+offset_right = 210.692
+offset_bottom = 82.8235
+scale = Vector2(1.02554, 1.03801)
+theme_override_font_sizes/font_size = 17
+text = "-Gabriel de Souza Santos"
+
+[node name="audio" type="Label" parent="."]
+modulate = Color(0.239216, 0.168627, 0.121569, 1)
+offset_left = 5.0
+offset_top = 455.0
+offset_right = 218.0
+offset_bottom = 478.0
+scale = Vector2(1.32, 1.49562)
+theme_override_fonts/font = ExtResource("1_dmlrq")
+theme_override_font_sizes/font_size = 25
+text = "DESIGNS DE SOM :"
+
+[node name="Label" type="Label" parent="audio"]
+layout_mode = 0
+offset_left = 7.96676
+offset_top = 30.0878
+offset_right = 245.967
+offset_bottom = 54.0878
+scale = Vector2(1.20213, 1)
+theme_override_font_sizes/font_size = 17
+text = "-Vanderson Costa Macêdo"
+
+[node name="Label2" type="Label" parent="audio"]
+layout_mode = 0
+offset_left = 7.57576
+offset_top = 55.4953
+offset_right = 256.576
+offset_bottom = 79.4953
+scale = Vector2(1.16487, 1)
+theme_override_font_sizes/font_size = 17
+text = "-Luiz Felipe"
+
+[node name="Button" type="Button" parent="."]
+modulate = Color(0.729412, 0.141176, 0.0431373, 1)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -133.0
+offset_top = 9.0
+offset_right = -102.0
+offset_bottom = 40.0
+grow_horizontal = 0
+scale = Vector2(4, 4)
+theme_override_fonts/font = ExtResource("1_dmlrq")
+theme_override_font_sizes/font_size = 24
+text = "X"
+flat = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

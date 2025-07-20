@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://ct67hqqjpskpo"]
+[gd_scene load_steps=6 format=3 uid="uid://ct67hqqjpskpo"]
 
 [ext_resource type="Script" uid="uid://dwofdec8uggro" path="res://tela_inicial.gd" id="1_8bm7t"]
 [ext_resource type="FontFile" uid="uid://dpqkkpxwxwpbu" path="res://upheavtt.ttf" id="1_g50o1"]
@@ -13,6 +13,8 @@ outline_size = 3
 outline_color = Color(0, 0, 0, 1)
 shadow_size = 9
 shadow_color = Color(0.227451, 0.227451, 0.227451, 1)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_ox3ib"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -73,6 +75,14 @@ layout_mode = 2
 text = "OPÇÕES
 "
 
+[node name="Button4" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_g50o1")
+theme_override_font_sizes/font_size = 26
+text = "CRÉDITOS"
+icon = SubResource("ViewportTexture_ox3ib")
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button4" to="." method="_on_button_4_pressed"]

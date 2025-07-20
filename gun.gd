@@ -5,15 +5,14 @@ var _can_attack: bool = true
 var attack_timer = null
 @onready var sprite = $Arma/AnimatedSprite2D
 @onready var sprite_perso = $CharacterBody2D/anim
+
 const perso_script = preload("res://character.gd")
 
 @export var _animatedgun: AnimationPlayer = null
-@export var _animatedbullets: AnimatedSprite2D
-
+@export var sprite_tiro: AnimatedSprite2D
 
 func _ready() -> void:
 	sprite.play("default")
-	_animatedbullets.visible = false
 
 func _process(delta):
 	var player_pos = get_parent().global_position
@@ -38,11 +37,11 @@ func _process(delta):
 
 func fire(direction: Vector2):
 	_can_attack = false
-	_animatedbullets.visible = true
+	sprite_tiro.visible = true
 	sprite.play("shoot")
 	_animatedgun.play("shoot")
-	_animatedbullets.play("shoot")
-	await get_tree().create_timer(1.2).timeout
+	sprite_tiro.play("shoot")
+	await get_tree().create_timer(0.4).timeout
 	sprite.play("default")
-	_animatedbullets.visible = false
+	sprite_tiro.visible = false
 	_can_attack = true

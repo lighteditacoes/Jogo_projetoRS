@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpr2wtfnouuc3"
-path="res://.godot/imported/All_Fire_Bullet_Pixel_16x16_00.png-a3586631b3e14f6c11f32a21fe56c12e.ctex"
+uid="uid://bjgssx7h7gh05"
+path="res://.godot/imported/fundo_créditos.jpg-531aebd6892b3a339b54d7879aeae826.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://arma/All_Fire_Bullet_Pixel_16x16_00.png"
-dest_files=["res://.godot/imported/All_Fire_Bullet_Pixel_16x16_00.png-a3586631b3e14f6c11f32a21fe56c12e.ctex"]
+source_file="res://fundo_créditos.jpg"
+dest_files=["res://.godot/imported/fundo_créditos.jpg-531aebd6892b3a339b54d7879aeae826.ctex"]
 
 [params]
 
