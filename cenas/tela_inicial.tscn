@@ -1,18 +1,19 @@
-[gd_scene load_steps=6 format=3 uid="uid://ct67hqqjpskpo"]
+[gd_scene load_steps=7 format=3 uid="uid://ct67hqqjpskpo"]
 
 [ext_resource type="Script" uid="uid://dwofdec8uggro" path="res://tela_inicial.gd" id="1_8bm7t"]
 [ext_resource type="FontFile" uid="uid://dpqkkpxwxwpbu" path="res://upheavtt.ttf" id="1_g50o1"]
 [ext_resource type="PackedScene" uid="uid://sw23vxgxd4jg" path="res://cenas/BotaoInicio.tscn" id="2_8bm7t"]
+[ext_resource type="Texture2D" path="res://tela-inicial-jogo.jpg" id="2_b8b2x"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_tv8no"]
 line_spacing = 4.0
 font = ExtResource("1_g50o1")
 font_size = 64
-font_color = Color(0.104662, 0.592717, 1, 1)
+font_color = Color(0.22718, 0.113271, 0.0615346, 1)
 outline_size = 3
-outline_color = Color(0, 0, 0, 1)
+outline_color = Color(0.470588, 0, 0, 1)
 shadow_size = 9
-shadow_color = Color(0.227451, 0.227451, 0.227451, 1)
+shadow_color = Color(1, 1, 1, 1)
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_ox3ib"]
 
@@ -25,26 +26,35 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_8bm7t")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = -12.0
+offset_right = 555.0
+offset_bottom = 362.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(1, 0.906024, 0.890599, 1)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("2_b8b2x")
 
 [node name="Label" type="Label" parent="."]
+modulate = Color(0.758192, 0.758192, 0.758192, 1)
+self_modulate = Color(0.864675, 0.864675, 0.864675, 1)
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -217.5
-offset_top = 96.0
-offset_right = 217.5
-offset_bottom = 154.0
+offset_left = -386.0
+offset_top = 159.0
+offset_right = 306.0
+offset_bottom = 217.0
 grow_horizontal = 2
-text = "NOME DO JOGO"
+scale = Vector2(0.786079, 0.952926)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+text = "INVASÃO DOS JAVALIS"
 label_settings = SubResource("LabelSettings_tv8no")
 horizontal_alignment = 1
 
@@ -55,12 +65,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -76.5
-offset_top = -52.0
-offset_right = 76.5
-offset_bottom = 52.0
+offset_left = -262.0
+offset_top = -135.0
+offset_right = -21.0
+offset_bottom = 99.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(1.12, 1.52)
 theme_override_constants/separation = 16
 
 [node name="Button" parent="VBoxContainer" instance=ExtResource("2_8bm7t")]
@@ -81,6 +92,12 @@ theme_override_fonts/font = ExtResource("1_g50o1")
 theme_override_font_sizes/font_size = 26
 text = "CRÉDITOS"
 icon = SubResource("ViewportTexture_ox3ib")
+
+[node name="Button5" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_g50o1")
+theme_override_font_sizes/font_size = 26
+text = "COMO JOGAR"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 
