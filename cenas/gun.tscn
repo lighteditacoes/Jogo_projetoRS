@@ -1,8 +1,9 @@
-[gd_scene load_steps=19 format=3 uid="uid://qh83cotcxv65"]
+[gd_scene load_steps=24 format=3 uid="uid://qh83cotcxv65"]
 
 [ext_resource type="Script" uid="uid://di0srerf81bsj" path="res://gun.gd" id="1_dk5gl"]
 [ext_resource type="Texture2D" uid="uid://cfgt4m3sequff" path="res://arma/Sprite_Arma_1.png" id="2_kw0bs"]
 [ext_resource type="Texture2D" uid="uid://ddib2bp67e58c" path="res://arma/Sprite_ArmaTiro.png" id="3_kw0bs"]
+[ext_resource type="Texture2D" uid="uid://6n5sr7csufnu" path="res://arma/All_Fire_Bullet_Pixel_16x16_00.png" id="4_trn7q"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8iju2"]
 atlas = ExtResource("2_kw0bs")
@@ -91,7 +92,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"shoot",
-"speed": 12.0
+"speed": 18.0
 }]
 
 [sub_resource type="Animation" id="Animation_kw0bs"]
@@ -103,10 +104,10 @@ tracks/0/path = NodePath("Area2D/CollisionPolygon2D:disabled")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [false]
+"values": [true, false]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -119,6 +120,30 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Area2D:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Area2D:monitoring")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="Animation" id="Animation_dk5gl"]
@@ -147,6 +172,30 @@ tracks/1/keys = {
 "update": 1,
 "values": [false, true, false]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Area2D:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.6),
+"transitions": PackedFloat32Array(1, 0.34151, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Area2D:monitoring")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8iju2"]
 _data = {
@@ -154,16 +203,52 @@ _data = {
 &"shoot": SubResource("Animation_dk5gl")
 }
 
-[node name="Node2D" type="Node2D" node_paths=PackedStringArray("_animatedgun")]
+[sub_resource type="AtlasTexture" id="AtlasTexture_aujlb"]
+atlas = ExtResource("4_trn7q")
+region = Rect2(216, 351, 46, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_td86s"]
+atlas = ExtResource("4_trn7q")
+region = Rect2(262, 351, 46, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0plcb"]
+atlas = ExtResource("4_trn7q")
+region = Rect2(308, 351, 46, 49)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jxkcj"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aujlb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_td86s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0plcb")
+}],
+"loop": false,
+"name": &"shoot",
+"speed": 12.0
+}]
+
+[node name="Node2D" type="Node2D" node_paths=PackedStringArray("_animatedgun", "_animatedbullets")]
 scale = Vector2(1.5, 1.5)
 script = ExtResource("1_dk5gl")
 _animatedgun = NodePath("Arma/anim_gun")
+_animatedbullets = NodePath("Arma/Area2D/AnimatedSprite2D")
 
 [node name="Arma" type="Node2D" parent="."]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Arma"]
 scale = Vector2(0.45, 0.45)
 sprite_frames = SubResource("SpriteFrames_tbu6m")
+animation = &"shoot"
 
 [node name="anim_gun" type="AnimationPlayer" parent="Arma"]
 libraries = {
@@ -175,5 +260,13 @@ libraries = {
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Arma/Area2D"]
 visible = false
 position = Vector2(-2, 2.66667)
-polygon = PackedVector2Array(12.6667, -6, 7.33333, -2.66667, 12.6667, 0.666667, 75.3333, 26.6667, 75.3333, -30)
+polygon = PackedVector2Array(15.3333, -8, 12.6667, -4, 15.3333, -0.66667, 38, 10.6667, 37.3333, -19.3333)
+disabled = true
 one_way_collision_margin = 0.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Arma/Area2D"]
+position = Vector2(23.3333, -1.33333)
+rotation = 3.14159
+scale = Vector2(0.6, 0.6)
+sprite_frames = SubResource("SpriteFrames_jxkcj")
+animation = &"shoot"
