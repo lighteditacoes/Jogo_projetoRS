@@ -1,6 +1,7 @@
-[gd_scene load_steps=16 format=3 uid="uid://de5ds5s2ivoki"]
+[gd_scene load_steps=21 format=3 uid="uid://de5ds5s2ivoki"]
 
 [ext_resource type="Script" uid="uid://bdxn568l2cc3f" path="res://character.gd" id="1_pjt0s"]
+[ext_resource type="Texture2D" uid="uid://35bix3e2j2wj" path="res://personagem/GauchoSemBracoCorrendo_1.png" id="3_3puat"]
 [ext_resource type="Texture2D" uid="uid://c2db7di327fc5" path="res://personagem/Gaucho_3.png" id="3_wfnr8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pjt0s"]
@@ -50,6 +51,22 @@ region = Rect2(0, 120, 40, 40)
 atlas = ExtResource("3_wfnr8")
 region = Rect2(40, 120, 40, 40)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_hfy0t"]
+atlas = ExtResource("3_3puat")
+region = Rect2(0, 0, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y5ddj"]
+atlas = ExtResource("3_3puat")
+region = Rect2(40, 0, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s7ywu"]
+atlas = ExtResource("3_3puat")
+region = Rect2(0, 40, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p06vr"]
+atlas = ExtResource("3_3puat")
+region = Rect2(40, 40, 40, 40)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_88tkl"]
 animations = [{
 "frames": [{
@@ -89,6 +106,23 @@ animations = [{
 "loop": true,
 "name": &"idle",
 "speed": 18.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hfy0t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y5ddj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s7ywu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p06vr")
+}],
+"loop": true,
+"name": &"run",
+"speed": 8.0
 }]
 
 [node name="Node2D" type="Node2D"]
@@ -104,4 +138,5 @@ shape = SubResource("RectangleShape2D_pjt0s")
 
 [node name="anim" type="AnimatedSprite2D" parent="CharacterBody2D"]
 sprite_frames = SubResource("SpriteFrames_88tkl")
-animation = &"idle"
+animation = &"run"
+frame_progress = 0.254923

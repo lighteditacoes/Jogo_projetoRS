@@ -770,15 +770,13 @@ scale = Vector2(2, 2)
 tile_map_data = PackedByteArray("AAAGAAIAAQAJAAEAAAAGAAMAAQAJAAIAAAAGAAQAAQAJAAMAAAAGAAUAAQAJAAQAAAAGAAYAAQAJAAUAAAAHAAEAAQAKAAAAAAAHAAIAAQAKAAEAAAAHAAMAAQAKAAIAAAAHAAQAAQAKAAMAAAAHAAUAAQAKAAQAAAAHAAYAAQAKAAUAAAAIAAEAAQALAAAAAAAIAAIAAQALAAEAAAAIAAMAAQALAAIAAAAIAAQAAQALAAMAAAAIAAUAAQALAAQAAAAIAAYAAQALAAUAAAAJAAEAAQAMAAAAAAAJAAIAAQAMAAEAAAAJAAMAAQAMAAIAAAAJAAQAAQAMAAMAAAAJAAUAAQAMAAQAAAAJAAYAAQAMAAUAAAAKAAIAAQANAAEAAAAKAAMAAQANAAIAAAAKAAQAAQANAAMAAAAKAAUAAQANAAQAAAAKAAYAAQANAAUAAAA=")
 tile_set = SubResource("TileSet_ot40p")
 
-[node name="Node2D" parent="." instance=ExtResource("7_ot40p")]
+[node name="Character" parent="." instance=ExtResource("7_ot40p")]
 position = Vector2(298, 219)
 
-[node name="Camera2D" type="Camera2D" parent="Node2D"]
+[node name="Camera2D" type="Camera2D" parent="Character"]
 zoom = Vector2(1.2, 1.2)
-process_callback = 0
 limit_smoothed = true
 position_smoothing_enabled = true
-position_smoothing_speed = 2.0
+position_smoothing_speed = 5.355
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
-editor_draw_screen = false

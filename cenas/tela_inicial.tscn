@@ -1,9 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://ct67hqqjpskpo"]
+[gd_scene load_steps=6 format=3 uid="uid://ct67hqqjpskpo"]
 
 [ext_resource type="Script" uid="uid://dwofdec8uggro" path="res://tela_inicial.gd" id="1_8bm7t"]
 [ext_resource type="FontFile" uid="uid://dpqkkpxwxwpbu" path="res://upheavtt.ttf" id="1_g50o1"]
-[ext_resource type="PackedScene" uid="uid://sw23vxgxd4jg" path="res://cenas/BotaoInicio.tscn" id="2_8bm7t"]
-[ext_resource type="Texture2D" path="res://tela-inicial-jogo.jpg" id="2_b8b2x"]
+[ext_resource type="Texture2D" uid="uid://cd0n0eumhjin1" path="res://tela-inicial-jogo.jpg" id="2_b8b2x"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_tv8no"]
 line_spacing = 4.0
@@ -47,14 +46,16 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -386.0
-offset_top = 159.0
-offset_right = 306.0
-offset_bottom = 217.0
+offset_left = -262.0
+offset_top = 70.0
+offset_right = 216.0
+offset_bottom = 239.0
 grow_horizontal = 2
 scale = Vector2(0.786079, 0.952926)
 theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
-text = "INVASÃO DOS JAVALIS"
+theme_override_font_sizes/font_size = 0
+text = "INVASÃO DOS
+ JAVALIS"
 label_settings = SubResource("LabelSettings_tv8no")
 horizontal_alignment = 1
 
@@ -65,41 +66,50 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -262.0
-offset_top = -135.0
-offset_right = -21.0
-offset_bottom = 99.0
+offset_left = -295.0
+offset_top = -145.0
+offset_right = -54.0
+offset_bottom = 89.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.12, 1.52)
 theme_override_constants/separation = 16
 
-[node name="Button" parent="VBoxContainer" instance=ExtResource("2_8bm7t")]
+[node name="Jogar" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("1_g50o1")
+theme_override_font_sizes/font_size = 26
+text = "JOGAR"
 
-[node name="Button3" parent="VBoxContainer" instance=ExtResource("2_8bm7t")]
+[node name="Opcoes" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-text = "SAIR"
+theme_override_fonts/font = ExtResource("1_g50o1")
+theme_override_font_sizes/font_size = 26
+text = "OPÇÕES"
 
-[node name="Button2" parent="VBoxContainer" instance=ExtResource("2_8bm7t")]
+[node name="Como Jogar" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-text = "OPÇÕES
-"
+theme_override_fonts/font = ExtResource("1_g50o1")
+theme_override_font_sizes/font_size = 26
+text = "COMO JOGAR"
 
-[node name="Button4" type="Button" parent="VBoxContainer"]
+[node name="Creditos" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_g50o1")
 theme_override_font_sizes/font_size = 26
 text = "CRÉDITOS"
 icon = SubResource("ViewportTexture_ox3ib")
 
-[node name="Button5" type="Button" parent="VBoxContainer"]
+[node name="Sair" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_g50o1")
 theme_override_font_sizes/font_size = 26
-text = "COMO JOGAR"
+text = "SAIR"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 
-[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="VBoxContainer/Jogar" to="." method="_on_jogar_pressed"]
+[connection signal="pressed" from="VBoxContainer/Opcoes" to="." method="_on_opcoes_pressed"]
+[connection signal="pressed" from="VBoxContainer/Como Jogar" to="." method="_on_como_jogar_pressed"]
+[connection signal="pressed" from="VBoxContainer/Creditos" to="." method="_on_creditos_pressed"]
+[connection signal="pressed" from="VBoxContainer/Sair" to="." method="_on_sair_pressed"]
