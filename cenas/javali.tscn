@@ -10,36 +10,33 @@ radius = 209.086
 radius = 5.0
 height = 38.0
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ea3qt"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_y1mei"]
 atlas = ExtResource("1_ea3qt")
 region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_y1mei"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_k6lq3"]
 atlas = ExtResource("1_ea3qt")
 region = Rect2(32, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_k6lq3"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_jq7ha"]
 atlas = ExtResource("1_ea3qt")
 region = Rect2(0, 32, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_jq7ha"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_a1a3n"]
 atlas = ExtResource("1_ea3qt")
 region = Rect2(32, 32, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_a1a3n"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_exe3j"]
 atlas = ExtResource("1_ea3qt")
 region = Rect2(0, 64, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_exe3j"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_4cflh"]
 atlas = ExtResource("1_ea3qt")
 region = Rect2(32, 64, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4cflh"]
 animations = [{
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ea3qt")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_y1mei")
 }, {
@@ -54,6 +51,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_exe3j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4cflh")
 }],
 "loop": true,
 "name": &"idle",
@@ -78,8 +78,7 @@ shape = SubResource("CapsuleShape2D_y1mei")
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_4cflh")
 animation = &"idle"
-frame = 1
-frame_progress = 0.947796
+frame_progress = 0.363159
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
