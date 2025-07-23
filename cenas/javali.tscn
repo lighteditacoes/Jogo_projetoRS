@@ -78,7 +78,7 @@ shape = SubResource("CapsuleShape2D_y1mei")
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_4cflh")
 animation = &"idle"
-frame_progress = 0.242006
+frame_progress = 0.363159
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

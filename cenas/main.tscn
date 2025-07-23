@@ -1,8 +1,9 @@
-[gd_scene load_steps=16 format=4 uid="uid://c68vqdb20ten0"]
+[gd_scene load_steps=17 format=4 uid="uid://c68vqdb20ten0"]
 
 [ext_resource type="PackedScene" uid="uid://de5ds5s2ivoki" path="res://cenas/character.tscn" id="1_bowdc"]
 [ext_resource type="Texture2D" uid="uid://ci8jyr60qaa02" path="res://cabana/chaodemadeira.png" id="1_w0f3w"]
 [ext_resource type="Texture2D" uid="uid://b1exgcgk4wo7o" path="res://cabana/parede_de_lado_da_casa_de_madeira.png" id="3_1b13l"]
+[ext_resource type="AudioStream" uid="uid://n3426eufmlc" path="res://audios/No Fundo da Grota.mp3" id="3_mtek3"]
 [ext_resource type="Texture2D" uid="uid://btswd1o7wkwsi" path="res://cabana/paredecasa.png" id="4_df318"]
 [ext_resource type="Texture2D" uid="uid://dpa1ujl02arrb" path="res://cabana/KINA.png" id="4_o7sug"]
 [ext_resource type="Texture2D" uid="uid://drqm1rvq6td1h" path="res://cabana/KINA_baixo_com_pedras.png" id="5_ogws0"]
@@ -74,3 +75,12 @@ tile_set = SubResource("TileSet_o7sug")
 
 [node name="Node2D" parent="." instance=ExtResource("1_bowdc")]
 position = Vector2(575, 350)
+
+[node name="Camera2D" type="Camera2D" parent="Node2D"]
+zoom = Vector2(1.2, 1.2)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_mtek3")
+volume_db = -11.244
+autoplay = true
+parameters/looping = true
