@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://dkh3gkeglgnjy"]
 
 [ext_resource type="Texture2D" uid="uid://cnm226qmxsdyp" path="res://javali/Javali_idle.png" id="1_ea3qt"]
-[ext_resource type="Script" path="res://cenas/javali.gd" id="1_y1mei"]
+[ext_resource type="Script" uid="uid://b5ww0vihuoojq" path="res://cenas/javali.gd" id="1_y1mei"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ea3qt"]
 radius = 209.086
