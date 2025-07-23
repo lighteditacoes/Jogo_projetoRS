@@ -1,0 +1,85 @@
+[gd_scene load_steps=12 format=3 uid="uid://yl0vtny5wapf"]
+
+[ext_resource type="Texture2D" path="res://javali/Javali_idle.png" id="1_ea3qt"]
+[ext_resource type="Script" uid="uid://vhmv5gmpn3nn" path="res://cenas/javali.gd" id="1_y1mei"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ea3qt"]
+radius = 209.086
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y1mei"]
+radius = 5.0
+height = 38.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ea3qt"]
+atlas = ExtResource("1_ea3qt")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y1mei"]
+atlas = ExtResource("1_ea3qt")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k6lq3"]
+atlas = ExtResource("1_ea3qt")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jq7ha"]
+atlas = ExtResource("1_ea3qt")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a1a3n"]
+atlas = ExtResource("1_ea3qt")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_exe3j"]
+atlas = ExtResource("1_ea3qt")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4cflh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ea3qt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y1mei")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k6lq3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jq7ha")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a1a3n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_exe3j")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 20.0
+}]
+
+[node name="javali" type="CharacterBody2D" node_paths=PackedStringArray("animacao_javali")]
+script = ExtResource("1_y1mei")
+animacao_javali = NodePath("AnimatedSprite2D")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_ea3qt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3, 13)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_y1mei")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_4cflh")
+animation = &"idle"
+frame = 1
+frame_progress = 0.947796
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
