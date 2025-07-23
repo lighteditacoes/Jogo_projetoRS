@@ -93,7 +93,7 @@ animations = [{
 
 [node name="Node2D" type="Node2D"]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." node_paths=PackedStringArray("_animatedsprite")]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." node_paths=PackedStringArray("_animatedsprite") groups=["player"]]
 scale = Vector2(1.5, 1.5)
 script = ExtResource("1_pjt0s")
 _animatedsprite = NodePath("anim")
