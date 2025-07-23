@@ -45,5 +45,5 @@ func _animate() -> void:
 		
 	if velocity == Vector2(0,0):
 		_animatedsprite.play("idle")
-	elif velocity != Vector2(0,0):
-		_animatedsprite.play("run")
+	#elif velocity != Vector2(0,0):
+		#_animatedsprite.play("run")

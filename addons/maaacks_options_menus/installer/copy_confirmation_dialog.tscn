@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://cyx4i4v30bw4o"]
+[gd_scene load_steps=0 format=3 uid="uid://cyx4i4v30bw4o"]
 
 [node name="CopyConfirmationDialog" type="ConfirmationDialog"]
 title = "Copy Examples"
