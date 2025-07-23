@@ -1,0 +1,56 @@
+[gd_scene load_steps=7 format=3 uid="uid://hmx6o472ropw"]
+
+[ext_resource type="PackedScene" uid="uid://bvwl11s2p0hd" path="res://addons/maaacks_options_menus/base/scenes/menus/options_menu/master_options_menu.tscn" id="1_uaidt"]
+[ext_resource type="PackedScene" uid="uid://dp3rgqaehb3xu" path="res://addons/maaacks_options_menus/base/scenes/menus/options_menu/input/input_options_menu.tscn" id="2_15wl6"]
+[ext_resource type="Texture2D" uid="uid://bjgssx7h7gh05" path="res://fundo_créditos.jpg" id="2_mn2hd"]
+[ext_resource type="PackedScene" uid="uid://c8vnncjwqcpab" path="res://addons/maaacks_options_menus/base/scenes/menus/options_menu/audio/audio_options_menu.tscn" id="3_qg4me"]
+[ext_resource type="PackedScene" uid="uid://b2numvphf2kau" path="res://addons/maaacks_options_menus/base/scenes/menus/options_menu/video/video_options_menu.tscn" id="4_1t848"]
+[ext_resource type="FontFile" uid="uid://dpqkkpxwxwpbu" path="res://upheavtt.ttf" id="6_838s4"]
+
+[node name="MasterOptionsMenu" instance=ExtResource("1_uaidt")]
+
+[node name="TextureRect" type="TextureRect" parent="." index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_mn2hd")
+metadata/_edit_use_anchors_ = true
+
+[node name="TabContainer" parent="." index="1"]
+current_tab = 0
+
+[node name="Controls" parent="TabContainer" index="1" instance=ExtResource("2_15wl6")]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="Audio" parent="TabContainer" index="2" instance=ExtResource("3_qg4me")]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="Video" parent="TabContainer" index="3" instance=ExtResource("4_1t848")]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="Button" type="Button" parent="." index="2"]
+modulate = Color(0.729412, 0.141176, 0.0431373, 1)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -133.0
+offset_top = 9.0
+offset_right = -102.0
+offset_bottom = 40.0
+grow_horizontal = 0
+scale = Vector2(4, 4)
+theme_override_fonts/font = ExtResource("6_838s4")
+theme_override_font_sizes/font_size = 24
+text = "X"
+flat = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
