@@ -79,12 +79,9 @@ layout_mode = 2
 
 [node name="Button3" parent="VBoxContainer" instance=ExtResource("2_8bm7t")]
 layout_mode = 2
-text = "SAIR"
 
 [node name="Button2" parent="VBoxContainer" instance=ExtResource("2_8bm7t")]
 layout_mode = 2
-text = "OPÇÕES
-"
 
 [node name="Button4" type="Button" parent="VBoxContainer"]
 layout_mode = 2
