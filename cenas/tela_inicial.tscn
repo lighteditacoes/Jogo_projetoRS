@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://ct67hqqjpskpo"]
+[gd_scene load_steps=7 format=3 uid="uid://ct67hqqjpskpo"]
 
 [ext_resource type="Script" uid="uid://dwofdec8uggro" path="res://tela_inicial.gd" id="1_8bm7t"]
 [ext_resource type="FontFile" uid="uid://dpqkkpxwxwpbu" path="res://upheavtt.ttf" id="1_g50o1"]
 [ext_resource type="Texture2D" uid="uid://cd0n0eumhjin1" path="res://tela-inicial-jogo.jpg" id="2_b8b2x"]
+[ext_resource type="AudioStream" uid="uid://d4eajmpnyqmcd" path="res://audios/passaros cantando.mp3" id="4_b8b2x"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_tv8no"]
 line_spacing = 4.0
@@ -46,15 +47,16 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -446.5
-offset_top = 186.0
-offset_right = 245.5
-offset_bottom = 355.0
+offset_left = -605.0
+offset_top = 160.0
+offset_right = 87.0
+offset_bottom = 329.0
 grow_horizontal = 2
-scale = Vector2(0.786079, 0.952926)
+scale = Vector2(1.256, 1.523)
 theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 0
-text = "INVASÃO DOS JAVALIS"
+text = "INVASÃO DOS
+ JAVALIS"
 label_settings = SubResource("LabelSettings_tv8no")
 horizontal_alignment = 1
 
@@ -65,10 +67,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -312.0
-offset_top = -96.0
-offset_right = -71.0
-offset_bottom = 138.0
+offset_left = -293.0
+offset_right = -52.0
+offset_bottom = 234.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.12, 1.52)
@@ -86,12 +87,6 @@ theme_override_fonts/font = ExtResource("1_g50o1")
 theme_override_font_sizes/font_size = 26
 text = "OPÇÕES"
 
-[node name="Como Jogar" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("1_g50o1")
-theme_override_font_sizes/font_size = 26
-text = "COMO JOGAR"
-
 [node name="Creditos" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_g50o1")
@@ -106,9 +101,11 @@ theme_override_font_sizes/font_size = 26
 text = "SAIR"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_b8b2x")
+autoplay = true
+parameters/looping = true
 
 [connection signal="pressed" from="VBoxContainer/Jogar" to="." method="_on_jogar_pressed"]
 [connection signal="pressed" from="VBoxContainer/Opcoes" to="." method="_on_opcoes_pressed"]
-[connection signal="pressed" from="VBoxContainer/Como Jogar" to="." method="_on_como_jogar_pressed"]
 [connection signal="pressed" from="VBoxContainer/Creditos" to="." method="_on_creditos_pressed"]
 [connection signal="pressed" from="VBoxContainer/Sair" to="." method="_on_sair_pressed"]

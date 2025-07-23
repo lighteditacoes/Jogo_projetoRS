@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d4eajmpnyqmcd"
+path="res://.godot/imported/passaros cantando.mp3-7a9214bab88b69dbf18ff871853b6478.mp3str"
+
+[deps]
+
+source_file="res://audios/passaros cantando.mp3"
+dest_files=["res://.godot/imported/passaros cantando.mp3-7a9214bab88b69dbf18ff871853b6478.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
