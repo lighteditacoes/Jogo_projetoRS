@@ -30,10 +30,6 @@ window/stretch/aspect="expand"
 
 enabled=PackedStringArray("res://addons/phantom_camera/plugin.cfg")
 
-[global_group]
-
-player=""
-
 [input]
 
 atirar={

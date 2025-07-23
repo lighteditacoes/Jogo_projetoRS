@@ -1,4 +1,4 @@
-[gd_scene load_steps=0 format=3 uid="uid://ckx50am7thhd2"]
+[gd_scene format=3 uid="uid://ckx50am7thhd2"]
 
 [node name="DestinationDialog" type="FileDialog"]
 title = "Select a Destination"
