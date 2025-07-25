@@ -60,7 +60,7 @@ animations = [{
 "speed": 20.0
 }]
 
-[node name="javali" type="CharacterBody2D" node_paths=PackedStringArray("animacao_javali")]
+[node name="javali" type="CharacterBody2D" node_paths=PackedStringArray("animacao_javali") groups=["enemy"]]
 script = ExtResource("1_y1mei")
 animacao_javali = NodePath("AnimatedSprite2D")
 

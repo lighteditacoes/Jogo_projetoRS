@@ -100,26 +100,26 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Area2D/CollisionPolygon2D:disabled")
+tracks/0/path = NodePath("TiroArea/CollisionPolygon2D:disabled")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(1.1),
-"transitions": PackedFloat32Array(5.27803),
+"times": PackedFloat32Array(0.0666667, 0.333333, 1.1),
+"transitions": PackedFloat32Array(1, 1, 5.27803),
 "update": 1,
-"values": [true]
+"values": [true, false, true]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Area2D/CollisionPolygon2D:visible")
+tracks/1/path = NodePath("TiroArea/CollisionPolygon2D:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(1.13333),
-"transitions": PackedFloat32Array(9.51365),
+"times": PackedFloat32Array(0.0666667, 0.366667, 1.13333),
+"transitions": PackedFloat32Array(1, 1, 9.51365),
 "update": 1,
-"values": [false]
+"values": [false, true, false]
 }
 
 [sub_resource type="Animation" id="Animation_dk5gl"]
@@ -127,7 +127,7 @@ resource_name = "shoot"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Area2D/CollisionPolygon2D:disabled")
+tracks/0/path = NodePath("TiroArea/CollisionPolygon2D:disabled")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -139,7 +139,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Area2D/CollisionPolygon2D:visible")
+tracks/1/path = NodePath("TiroArea/CollisionPolygon2D:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -169,9 +169,12 @@ region = Rect2(260, 350, 51, 50)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_jxkcj"]
 animations = [{
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
 "loop": true,
-"name": &"defaut",
+"name": &"default",
 "speed": 5.0
 }, {
 "frames": [{
@@ -202,7 +205,7 @@ animations = [{
 scale = Vector2(1.5, 1.5)
 script = ExtResource("1_dk5gl")
 _animatedgun = NodePath("Arma/anim_gun")
-sprite_tiro = NodePath("Arma/Area2D/AnimatedSprite2D")
+sprite_tiro = NodePath("Arma/TiroArea/AnimatedSprite2D")
 
 [node name="Arma" type="Node2D" parent="."]
 
@@ -215,19 +218,20 @@ libraries = {
 &"": SubResource("AnimationLibrary_8iju2")
 }
 
-[node name="Area2D" type="Area2D" parent="Arma"]
+[node name="TiroArea" type="Area2D" parent="Arma"]
+position = Vector2(2, -1.33333)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Arma/Area2D"]
-visible = false
-position = Vector2(-2, 2.66667)
-polygon = PackedVector2Array(12.6667, -6, 7.33333, -2.66667, 12.6667, 0.666667, 75.3333, 26.6667, 75.3333, -30)
-disabled = true
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Arma/TiroArea"]
+position = Vector2(-2, 5.33333)
+polygon = PackedVector2Array(7.33333, -8.66667, 8, -3.33334, 32.6667, 11.3333, 32.6667, -22.6667)
 one_way_collision_margin = 0.0
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Arma/Area2D"]
-position = Vector2(20.6667, -2.66667)
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Arma/TiroArea"]
+position = Vector2(21.3333, 4.76837e-07)
 rotation = 3.14159
 scale = Vector2(0.7, 0.7)
 sprite_frames = SubResource("SpriteFrames_jxkcj")
 animation = &"shoot"
-frame_progress = 0.503379
+
+[connection signal="body_entered" from="Arma/TiroArea" to="." method="_on_tiro_area_body_entered"]
+[connection signal="body_exited" from="Arma/TiroArea" to="." method="_on_tiro_area_body_exited"]
