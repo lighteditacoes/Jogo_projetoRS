@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://d3i6wn0v3fuw3"]
+
+[ext_resource type="Texture2D" uid="uid://dv6q7bwmydg8a" path="res://icon.svg" id="1_hf8bx"]
+[ext_resource type="Script" uid="uid://bcrkv10c0ioy" path="res://cenas/chimarrao.gd" id="1_oilm3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_skjs6"]
+size = Vector2(43, 43)
+
+[node name="Chimarrão" type="Area2D"]
+script = ExtResource("1_oilm3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("1_hf8bx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_skjs6")
+
+[node name="Efeito_chimarrao" type="Timer" parent="."]
+wait_time = 4.0
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
