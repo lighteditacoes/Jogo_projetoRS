@@ -44,9 +44,11 @@ var _dialog_data: Dictionary = {
 @export_category("Objects")
 @export var _hud: CanvasLayer = null
 @export var _gaucho: AnimatedSprite2D = null
+@export var _vovo: AnimatedSprite2D = null
 
 func _ready() -> void:
 	_gaucho.play("default")
+	_vovo.play("default")
 	
 	var _new_dialog: DialogScreen = _DIALOG_SCREEN.instantiate()
 	_new_dialog.data = _dialog_data

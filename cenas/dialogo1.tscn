@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=4 uid="uid://b4y8ml566yj1f"]
+[gd_scene load_steps=48 format=4 uid="uid://b4y8ml566yj1f"]
 
 [ext_resource type="Script" uid="uid://suypjhmkfehi" path="res://cenas/dialogo_1.gd" id="1_tvymb"]
 [ext_resource type="Texture2D" uid="uid://ci8jyr60qaa02" path="res://cabana/chaodemadeira.png" id="1_tx6wt"]
@@ -7,7 +7,12 @@
 [ext_resource type="Texture2D" uid="uid://dpa1ujl02arrb" path="res://cabana/KINA.png" id="4_0w4wd"]
 [ext_resource type="Texture2D" uid="uid://drqm1rvq6td1h" path="res://cabana/KINA_baixo_com_pedras.png" id="5_tpjwh"]
 [ext_resource type="Texture2D" uid="uid://b4porwve28fk7" path="res://cabana/parede_de_madeira_de_baixo_com_pedras.png" id="6_ovt6m"]
+[ext_resource type="Texture2D" uid="uid://b335xyfid7vmr" path="res://mapa_principal/Interior.png" id="8_ovt6m"]
+[ext_resource type="Texture2D" uid="uid://bsa6418veoljh" path="res://personagem/VoSemBraco_Idle.png" id="9_1lc6d"]
 [ext_resource type="Texture2D" uid="uid://c2db7di327fc5" path="res://personagem/Gaucho_3.png" id="9_tvymb"]
+[ext_resource type="Texture2D" uid="uid://jnnlpn3helsd" path="res://mapa_principal/Workbench.png" id="9_ymb7t"]
+[ext_resource type="Texture2D" uid="uid://5f00jp36td1f" path="res://mapa_principal/Butchery_02.png" id="10_bsqbp"]
+[ext_resource type="Texture2D" uid="uid://bwdihe1vkv0vn" path="res://mapa_principal/Cooking Station.png" id="11_xfhul"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w0f3w"]
 texture = ExtResource("1_tx6wt")
@@ -56,6 +61,107 @@ sources/3 = SubResource("TileSetAtlasSource_o7sug")
 sources/4 = SubResource("TileSetAtlasSource_gt82b")
 sources/8 = SubResource("TileSetAtlasSource_w07e8")
 sources/9 = SubResource("TileSetAtlasSource_0j66d")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xn6wy"]
+texture = ExtResource("8_ovt6m")
+0:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+5:0/size_in_atlas = Vector2i(2, 3)
+5:0/0 = 0
+5:3/size_in_atlas = Vector2i(2, 2)
+5:3/0 = 0
+7:0/size_in_atlas = Vector2i(2, 3)
+7:0/0 = 0
+9:1/size_in_atlas = Vector2i(1, 2)
+9:1/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+0:5/size_in_atlas = Vector2i(3, 2)
+0:5/0 = 0
+0:7/size_in_atlas = Vector2i(1, 2)
+0:7/0 = 0
+1:7/size_in_atlas = Vector2i(1, 2)
+1:7/0 = 0
+2:7/size_in_atlas = Vector2i(1, 2)
+2:7/0 = 0
+3:7/size_in_atlas = Vector2i(1, 2)
+3:7/0 = 0
+4:7/size_in_atlas = Vector2i(2, 2)
+4:7/0 = 0
+6:7/size_in_atlas = Vector2i(1, 2)
+6:7/0 = 0
+7:7/size_in_atlas = Vector2i(1, 2)
+7:7/0 = 0
+8:7/size_in_atlas = Vector2i(1, 2)
+8:7/0 = 0
+9:7/size_in_atlas = Vector2i(1, 2)
+9:7/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_745md"]
+texture = ExtResource("9_ymb7t")
+0:8/size_in_atlas = Vector2i(2, 2)
+0:8/0 = 0
+3:7/size_in_atlas = Vector2i(3, 3)
+3:7/0 = 0
+7:7/size_in_atlas = Vector2i(5, 4)
+7:7/0 = 0
+0:12/size_in_atlas = Vector2i(2, 2)
+0:12/0 = 0
+3:11/size_in_atlas = Vector2i(3, 3)
+3:11/0 = 0
+7:11/size_in_atlas = Vector2i(4, 4)
+7:11/0 = 0
+0:5/size_in_atlas = Vector2i(2, 2)
+0:5/0 = 0
+3:4/size_in_atlas = Vector2i(3, 3)
+3:4/0 = 0
+6:4/size_in_atlas = Vector2i(5, 3)
+6:4/0 = 0
+0:1/size_in_atlas = Vector2i(2, 2)
+0:1/0 = 0
+3:0/size_in_atlas = Vector2i(3, 3)
+3:0/0 = 0
+7:0/size_in_atlas = Vector2i(4, 4)
+7:0/0 = 0
+0:16/size_in_atlas = Vector2i(2, 2)
+0:16/0 = 0
+3:15/size_in_atlas = Vector2i(3, 3)
+3:15/0 = 0
+6:15/size_in_atlas = Vector2i(5, 3)
+6:15/0 = 0
+0:19/size_in_atlas = Vector2i(2, 2)
+0:19/0 = 0
+3:18/size_in_atlas = Vector2i(3, 3)
+3:18/0 = 0
+7:18/size_in_atlas = Vector2i(5, 4)
+7:18/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0tjur"]
+texture = ExtResource("10_bsqbp")
+1:1/size_in_atlas = Vector2i(2, 2)
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m7dxa"]
+texture = ExtResource("11_xfhul")
+0:4/size_in_atlas = Vector2i(4, 4)
+0:4/0 = 0
+5:5/size_in_atlas = Vector2i(2, 3)
+5:5/0 = 0
+9:6/size_in_atlas = Vector2i(3, 2)
+9:6/0 = 0
+13:4/size_in_atlas = Vector2i(5, 5)
+13:4/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_p7ty7"]
+sources/0 = SubResource("TileSetAtlasSource_xn6wy")
+sources/1 = SubResource("TileSetAtlasSource_745md")
+sources/2 = SubResource("TileSetAtlasSource_0tjur")
+sources/3 = SubResource("TileSetAtlasSource_m7dxa")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1lc6d"]
 atlas = ExtResource("9_tvymb")
@@ -142,10 +248,75 @@ animations = [{
 "speed": 16.0
 }]
 
-[node name="Node2D" type="Node2D" node_paths=PackedStringArray("_hud", "_gaucho")]
+[sub_resource type="AtlasTexture" id="AtlasTexture_p7ty7"]
+atlas = ExtResource("9_1lc6d")
+region = Rect2(0, 0, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4m013"]
+atlas = ExtResource("9_1lc6d")
+region = Rect2(40, 0, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4xebe"]
+atlas = ExtResource("9_1lc6d")
+region = Rect2(80, 0, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_01hnf"]
+atlas = ExtResource("9_1lc6d")
+region = Rect2(0, 40, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4dme1"]
+atlas = ExtResource("9_1lc6d")
+region = Rect2(40, 40, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6cg8u"]
+atlas = ExtResource("9_1lc6d")
+region = Rect2(80, 40, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c658p"]
+atlas = ExtResource("9_1lc6d")
+region = Rect2(0, 80, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4aka6"]
+atlas = ExtResource("9_1lc6d")
+region = Rect2(40, 80, 40, 40)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h0aon"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p7ty7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4m013")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4xebe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_01hnf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4dme1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6cg8u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c658p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4aka6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[node name="Node2D" type="Node2D" node_paths=PackedStringArray("_hud", "_gaucho", "_vovo")]
 script = ExtResource("1_tvymb")
 _hud = NodePath("HUD")
 _gaucho = NodePath("Gaucho")
+_vovo = NodePath("Vovo")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_right = 1150.0
@@ -161,10 +332,22 @@ tile_set = SubResource("TileSet_mtek3")
 tile_map_data = PackedByteArray("AAAMAAQAAQAAAAAAAAANAAQAAQAAAAAAAAAOAAQAAQAAAAAAAAAPAAQAAQAAAAAAAAAQAAQAAQAAAAAAAAARAAQAAQAAAAAAAAASAAQAAQAAAAAAAAATAAQAAQAAAAAAAAAUAAQAAQAAAAAAAAAVAAQAAQAAAAAAAAAWAAQAAQAAAAAAAAAXAAQAAQAAAAAAAAAXABEACQAAAAAAABAWABEACQAAAAAAABAVABEACQAAAAAAABAUABEACQAAAAAAABATABEACQAAAAAAABASABEACQAAAAAAABARABEACQAAAAAAABAQABEACQAAAAAAABAPABEACQAAAAAAABAOABEACQAAAAAAABANABEACQAAAAAAABAMABEACQAAAAAAABAYAAQAAQAAAAAAAAALAAQAAQAAAAAAAAAKAAQAAQAAAAAAAAAJAAQAAQAAAAAAAAAIAAQAAQAAAAAAAAAHAAQAAQAAAAAAAAAZAAQAAQAAAAAAAAAaAAQAAQAAAAAAAAAbAAQAAQAAAAAAAAAcAAQAAQAAAAAAAAALABEACQAAAAAAAAAKABEACQAAAAAAAAAJABEACQAAAAAAAAAIABEACQAAAAAAAAAHABEACQAAAAAAAAAYABEACQAAAAAAAAAZABEACQAAAAAAAAAaABEACQAAAAAAAAAbABEACQAAAAAAAAAcABEACQAAAAAAAAAGABEACAAAAAAAAAAdABEACAAAAAAAABAdABAAAwAAAAAAAAAdAA8AAwAAAAAAAAAdAA4AAwAAAAAAAAAdAA0AAwAAAAAAAAAdAAwAAwAAAAAAAAAdAAsAAwAAAAAAAAAdAAoAAwAAAAAAAAAdAAkAAwAAAAAAAAAdAAgAAwAAAAAAAAAdAAcAAwAAAAAAAAAdAAYAAwAAAAAAAAAdAAUAAwAAAAAAAAAGABAAAwAAAAAAABAGAA8AAwAAAAAAABAGAA4AAwAAAAAAABAGAA0AAwAAAAAAABAGAAwAAwAAAAAAABAGAAsAAwAAAAAAABAGAAoAAwAAAAAAABAGAAkAAwAAAAAAABAGAAgAAwAAAAAAABAGAAcAAwAAAAAAABAGAAYAAwAAAAAAABAGAAUAAwAAAAAAABAdAAQABAAAAAAAAAAGAAQABAAAAAAAABA=")
 tile_set = SubResource("TileSet_o7sug")
 
+[node name="Mobília" type="TileMapLayer" parent="."]
+scale = Vector2(2.5, 2.5)
+tile_map_data = PackedByteArray("AAAKAAQAAAAFAAAAAAALAAQAAAAIAAcAAADJMK/EAAAFAAMAAAAQAAMAAAAHAAAAAAAHAAQAAAAFAAAAAAAGAAQAAAAGAAcAAAAOAAkAAAAAAAUAAAASAAQAAwAJAAYAAAAHAAoAAQADAAQAAAAVAAQAAgABAAEAAAAUAAgAAAAEAAcAAAAVAAgAAAADAAcAAAATAAgAAAACAAcAAAAUAAkAAAABAAcAAAAUAAcAAAAAAAcAAAAJAAsAAAACAAAAAAA=")
+tile_set = SubResource("TileSet_p7ty7")
+
 [node name="HUD" type="CanvasLayer" parent="."]
 
 [node name="Gaucho" type="AnimatedSprite2D" parent="."]
-position = Vector2(526, 352)
+position = Vector2(546, 352)
 scale = Vector2(1.75, 1.75)
 sprite_frames = SubResource("SpriteFrames_p7ty7")
-frame_progress = 0.341496
+frame_progress = 0.26654
+
+[node name="Vovo" type="AnimatedSprite2D" parent="."]
+position = Vector2(626, 352)
+scale = Vector2(1.75, 1.75)
+sprite_frames = SubResource("SpriteFrames_h0aon")
+frame_progress = 0.903453
+flip_h = true
