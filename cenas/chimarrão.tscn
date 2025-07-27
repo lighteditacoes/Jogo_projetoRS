@@ -1,23 +1,41 @@
-[gd_scene load_steps=4 format=3 uid="uid://d3i6wn0v3fuw3"]
+[gd_scene load_steps=7 format=3 uid="uid://d3i6wn0v3fuw3"]
 
-[ext_resource type="Texture2D" uid="uid://dv6q7bwmydg8a" path="res://icon.svg" id="1_hf8bx"]
 [ext_resource type="Script" uid="uid://bcrkv10c0ioy" path="res://cenas/chimarrao.gd" id="1_oilm3"]
+[ext_resource type="Texture2D" uid="uid://br4tgr57n861h" path="res://jogo/Chimarrao.png" id="2_oilm3"]
+[ext_resource type="PackedScene" uid="uid://c6vgp75kmrct0" path="res://cenas/particulas_chimarrao.tscn" id="3_skjs6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_skjs6"]
+atlas = ExtResource("2_oilm3")
+region = Rect2(0, 45, 45, 45)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qs7tb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_skjs6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_skjs6"]
-size = Vector2(43, 43)
+size = Vector2(37, 41)
 
 [node name="Chimarrão" type="Area2D"]
 script = ExtResource("1_oilm3")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.35, 0.35)
-texture = ExtResource("1_hf8bx")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-2, 0)
+sprite_frames = SubResource("SpriteFrames_qs7tb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_skjs6")
 
 [node name="Efeito_chimarrao" type="Timer" parent="."]
 wait_time = 4.0
+
+[node name="Particulas_chimarrao" parent="." instance=ExtResource("3_skjs6")]
+position = Vector2(-1, -23)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

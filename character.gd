@@ -7,6 +7,7 @@ var gun: Node2D
 var can_move: bool = true
 
 @export var _animatedsprite: AnimatedSprite2D
+@export var _som_passos: AudioStreamPlayer
 
 func _ready():
 	gun = gun_scene.instantiate()
@@ -45,5 +46,11 @@ func _animate() -> void:
 		
 	if velocity == Vector2(0,0):
 		_animatedsprite.play("idle")
+		if _som_passos.playing:
+			_som_passos.stop()
 	elif velocity != Vector2(0,0):
 		_animatedsprite.play("run")
+		if _som_passos.playing == false:
+			_som_passos.play()
+		else:
+			pass

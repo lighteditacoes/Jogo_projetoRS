@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://c6vgp75kmrct0"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_oilm3"]
+particles_animation = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = true
+
+[sub_resource type="Curve" id="Curve_oilm3"]
+_limits = [0.0, 200.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.567901, 173.034), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[node name="CPUParticles2D" type="CPUParticles2D"]
+modulate = Color(1, 1, 1, 0.956863)
+material = SubResource("CanvasItemMaterial_oilm3")
+amount = 46
+emission_shape = 1
+emission_sphere_radius = 23.26
+particle_flag_align_y = true
+spread = 46.9
+gravity = Vector2(0, -180)
+radial_accel_min = 71.74
+radial_accel_max = 71.74
+damping_max = 0.295
+scale_amount_min = 1.45
+scale_amount_max = 2.75
+color = Color(0.253564, 0.615475, 0.350102, 1)
+anim_speed_max = 8.65
+anim_speed_curve = SubResource("Curve_oilm3")

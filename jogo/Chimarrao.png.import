@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c5eo1yh77t201"
-path="res://.godot/imported/gaucho face.png-71f0148447699bf3ce48a32034c934f7.ctex"
+uid="uid://br4tgr57n861h"
+path="res://.godot/imported/Chimarrao.png-0bbc412175fe7a971a7782e349a41789.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://personagem/gaucho face.png"
-dest_files=["res://.godot/imported/gaucho face.png-71f0148447699bf3ce48a32034c934f7.ctex"]
+source_file="res://jogo/Chimarrao.png"
+dest_files=["res://.godot/imported/Chimarrao.png-0bbc412175fe7a971a7782e349a41789.ctex"]
 
 [params]
 

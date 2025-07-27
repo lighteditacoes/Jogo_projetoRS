@@ -1,23 +1,65 @@
 shader_type canvas_item;
-//render_mode unshaded; // optional
 
-// Noise texture
-uniform sampler2D noise_texture: repeat_enable, filter_nearest;
-// Fog density
-uniform float density: hint_range(0.0, 1.0) = 0.25;
-// Fog speed
-uniform vec2 speed = vec2(0.02, 0.01);
+uniform sampler2D screen_texture : hint_screen_texture;
+uniform float screen_width = 1024;
+uniform float screen_height = 600;
 
+// Curvature
+uniform float BarrelPower =1.1;
+// Color bleeding
+uniform float color_bleeding = 1.2;
+uniform float bleeding_range_x = 3;
+uniform float bleeding_range_y = 3;
+// Scanline
+uniform float lines_distance = 4.0;
+uniform float scan_size = 2.0;
+uniform float scanline_alpha = 0.9;
+uniform float lines_velocity = 30.0;
 
-// Called for every pixel the material is visible on
-void fragment() {
-	// Make the fog slowly move
-	vec2 uv = UV + speed * TIME;
-	// Sample the noise texture
-	float noise = texture(noise_texture, uv).r;
-	// Convert the noise from the (0.0, 1.0) range to the (-1.0, 1.0) range
-	// and clamp it between 0.0 and 1.0 again
-	float fog = clamp(noise * 2.0 - 1.0, 0.0, 1.0);
-	// Apply the fog effect
-	COLOR.a *= fog * density;
+vec2 distort(vec2 p)
+{
+	float angle = p.y / p.x;
+	float theta = atan(p.y,p.x);
+	float radius = pow(length(p), BarrelPower);
+
+	p.x = radius * cos(theta);
+	p.y = radius * sin(theta);
+
+	return 0.5 * (p + vec2(1.0, 1.0));
+}
+
+void get_color_bleeding(inout vec4 current_color,inout vec4 color_left){
+	current_color = current_color * vec4(color_bleeding, 0.5, 1.0 - color_bleeding, 1);
+	color_left = color_left * vec4(1.0 - color_bleeding, 0.5, color_bleeding, 1);
+}
+
+void get_color_scanline(vec2 uv, inout vec4 c, float time){
+	float line_row = floor((uv.y * screen_height/scan_size) + mod(time * lines_velocity, lines_distance));
+	float n = 1.0 - ceil( (mod(line_row,lines_distance) / lines_distance));
+	c = c - n * c * (1.0 - scanline_alpha);
+	c.a = 1.0;
+}
+
+void fragment()
+{
+	vec2 xy = SCREEN_UV * 2.0;
+	xy.x -= 1.0;
+	xy.y -= 1.0;
+
+	float d = length(xy);
+	if(d < 1.5){
+		xy = distort(xy);
+	}
+	else{
+		xy = SCREEN_UV;
+	}
+
+	float pixel_size_x = 1.0/screen_width * bleeding_range_x;
+	float pixel_size_y = 1.0/screen_height * bleeding_range_y;
+	vec4 color_left = texture(screen_texture, xy - vec2(pixel_size_x, pixel_size_y));
+	vec4 current_color = texture(screen_texture, xy);
+	get_color_bleeding(current_color, color_left);
+	vec4 c = current_color + color_left;
+	get_color_scanline(xy,c,TIME);
+	COLOR = c;
 }
