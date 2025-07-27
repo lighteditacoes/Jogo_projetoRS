@@ -9,6 +9,7 @@ var _can_attack: bool = true
 
 @export var _animatedgun: AnimationPlayer = null
 @export var sprite_tiro: AnimatedSprite2D
+@export var _som_tiro: AudioStreamPlayer
 
 func _ready() -> void:
 	sprite.play("default")
@@ -27,6 +28,7 @@ func _process(delta):
 
 		if Input.is_action_just_pressed("atirar"):
 			fire(direction)
+			_som_tiro.play()
 
 func fire(direction: Vector2) -> void:
 	_can_attack = false

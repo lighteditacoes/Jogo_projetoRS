@@ -1,9 +1,10 @@
-[gd_scene load_steps=25 format=3 uid="uid://qh83cotcxv65"]
+[gd_scene load_steps=26 format=3 uid="uid://qh83cotcxv65"]
 
 [ext_resource type="Script" uid="uid://di0srerf81bsj" path="res://gun.gd" id="1_dk5gl"]
 [ext_resource type="Texture2D" uid="uid://cfgt4m3sequff" path="res://arma/Sprite_Arma_1.png" id="2_kw0bs"]
 [ext_resource type="Texture2D" uid="uid://ddib2bp67e58c" path="res://arma/Sprite_ArmaTiro.png" id="3_kw0bs"]
 [ext_resource type="Texture2D" uid="uid://dpr2wtfnouuc3" path="res://arma/All_Fire_Bullet_Pixel_16x16_00.png" id="4_trn7q"]
+[ext_resource type="AudioStream" uid="uid://c6uob3nrlaj0u" path="res://audios/tiro_jogo_V2.mp3" id="5_aujlb"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8iju2"]
 atlas = ExtResource("2_kw0bs")
@@ -156,11 +157,12 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_trn7q"]
 size = Vector2(22.8856, 23.5853)
 
-[node name="Node2D" type="Node2D" node_paths=PackedStringArray("_animatedgun", "sprite_tiro")]
+[node name="Node2D" type="Node2D" node_paths=PackedStringArray("_animatedgun", "sprite_tiro", "_som_tiro")]
 scale = Vector2(1.5, 1.5)
 script = ExtResource("1_dk5gl")
 _animatedgun = NodePath("Arma/anim_gun")
 sprite_tiro = NodePath("Arma/TiroArea/AnimatedSprite2D")
+_som_tiro = NodePath("SomTiro")
 
 [node name="Arma" type="Node2D" parent="."]
 
@@ -188,6 +190,9 @@ position = Vector2(17.4372, -0.944624)
 rotation = 1.5708
 scale = Vector2(0.973798, 0.993485)
 shape = SubResource("RectangleShape2D_trn7q")
+
+[node name="SomTiro" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_aujlb")
 
 [connection signal="body_entered" from="Arma/TiroArea" to="." method="_on_tiro_area_body_entered"]
 [connection signal="body_exited" from="Arma/TiroArea" to="." method="_on_tiro_area_body_exited"]
