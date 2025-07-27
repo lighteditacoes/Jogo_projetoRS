@@ -38,3 +38,12 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 		seguindo_player = false
 		player = null
 		print("Player saiu da área!")
+
+
+func _on_area_mortal_body_entered(body: Node2D) -> void:
+	if body.is_in_group("player"):
+		print("é para morrer")
+		body.queue_free()
+		await get_tree().create_timer(0.4).timeout
+		get_tree().change_scene_to_file("res://cenas/game_over.tscn")
+		

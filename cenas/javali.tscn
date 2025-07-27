@@ -1,8 +1,11 @@
-[gd_scene load_steps=17 format=3 uid="uid://dkh3gkeglgnjy"]
+[gd_scene load_steps=18 format=3 uid="uid://dkh3gkeglgnjy"]
 
 [ext_resource type="Texture2D" uid="uid://cnm226qmxsdyp" path="res://javali/Javali_idle.png" id="1_ea3qt"]
 [ext_resource type="Script" uid="uid://b5ww0vihuoojq" path="res://cenas/javali.gd" id="1_y1mei"]
 [ext_resource type="Texture2D" uid="uid://c0diq4el8lap2" path="res://javali/javali_run.png" id="3_k6lq3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k6lq3"]
+size = Vector2(52, 38)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ea3qt"]
 radius = 209.086
@@ -98,6 +101,14 @@ animations = [{
 script = ExtResource("1_y1mei")
 animacao_javali = NodePath("AnimatedSprite2D")
 
+[node name="area_mortal" type="Area2D" parent="."]
+position = Vector2(4, 0)
+scale = Vector2(1.15646, 1.32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area_mortal"]
+position = Vector2(-2, -1)
+shape = SubResource("RectangleShape2D_k6lq3")
+
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
@@ -111,9 +122,8 @@ shape = SubResource("CapsuleShape2D_y1mei")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_4cflh")
-animation = &"run"
-frame = 3
-frame_progress = 0.860767
+animation = &"idle"
 
+[connection signal="body_entered" from="area_mortal" to="." method="_on_area_mortal_body_entered"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

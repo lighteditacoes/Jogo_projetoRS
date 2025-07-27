@@ -58,7 +58,7 @@ sources/4 = SubResource("TileSetAtlasSource_gt82b")
 sources/8 = SubResource("TileSetAtlasSource_w07e8")
 sources/9 = SubResource("TileSetAtlasSource_0j66d")
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D2" type="Node2D"]
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_right = 1150.0
@@ -91,3 +91,15 @@ position = Vector2(827, 265)
 
 [node name="javali2" parent="." instance=ExtResource("9_1yycb")]
 position = Vector2(298, 205)
+
+[node name="javali3" parent="." instance=ExtResource("9_1yycb")]
+position = Vector2(298, 487)
+
+[node name="javali4" parent="." instance=ExtResource("9_1yycb")]
+position = Vector2(768, 488)
+
+[node name="javali5" parent="." instance=ExtResource("9_1yycb")]
+position = Vector2(571, 155)
+
+[node name="javali6" parent="." instance=ExtResource("9_1yycb")]
+position = Vector2(490, 500)

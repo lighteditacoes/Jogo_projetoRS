@@ -155,9 +155,9 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_trn7q"]
-size = Vector2(22.8856, 23.5853)
+size = Vector2(26.015, 26.4509)
 
-[node name="Node2D" type="Node2D" node_paths=PackedStringArray("_animatedgun", "sprite_tiro", "_som_tiro")]
+[node name="Node2D2" type="Node2D" node_paths=PackedStringArray("_animatedgun", "sprite_tiro", "_som_tiro")]
 scale = Vector2(1.5, 1.5)
 script = ExtResource("1_dk5gl")
 _animatedgun = NodePath("Arma/anim_gun")
@@ -186,7 +186,7 @@ sprite_frames = SubResource("SpriteFrames_jxkcj")
 animation = &"shoot"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Arma/TiroArea"]
-position = Vector2(17.4372, -0.944624)
+position = Vector2(18.8607, -0.666667)
 rotation = 1.5708
 scale = Vector2(0.973798, 0.993485)
 shape = SubResource("RectangleShape2D_trn7q")
