@@ -103,3 +103,12 @@ position = Vector2(571, 155)
 
 [node name="javali6" parent="." instance=ExtResource("9_1yycb")]
 position = Vector2(490, 500)
+
+[node name="javali7" parent="." instance=ExtResource("9_1yycb")]
+position = Vector2(837, 412)
+
+[node name="javali8" parent="." instance=ExtResource("9_1yycb")]
+position = Vector2(329, 411)
+
+[node name="javali9" parent="." instance=ExtResource("9_1yycb")]
+position = Vector2(534, 153)

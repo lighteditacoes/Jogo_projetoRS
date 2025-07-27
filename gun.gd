@@ -4,6 +4,7 @@ var DISTANCIA_FIXA = 21.0
 var _can_attack: bool = true
 var quant_javali: int = 0
 
+@onready var contador_kill: Label = $hud/Control/container/kills_container/contador_kill
 @onready var sprite = $Arma/AnimatedSprite2D
 @onready var sprite_perso = $CharacterBody2D/anim
 @onready var tiro_area = $Arma/TiroArea
@@ -31,8 +32,9 @@ func _process(delta):
 			fire(direction)
 			_som_tiro.play()
 			
-	if quant_javali == 6:
+	if quant_javali == 10:
 		await get_tree().create_timer(0.5).timeout
+		Globals.cont_kill = 0
 		get_tree().change_scene_to_file("res://cenas/TESTE_WIN.tscn")
 
 
@@ -54,6 +56,7 @@ func fire(direction: Vector2) -> void:
 			print("Inimigo abatido: ", corpo.name)
 			corpo.queue_free()
 			quant_javali += 1
+			Globals.cont_kill = quant_javali
 
 	await get_tree().create_timer(0.4).timeout
 	sprite.play("default")

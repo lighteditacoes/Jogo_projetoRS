@@ -103,7 +103,7 @@ animacao_javali = NodePath("AnimatedSprite2D")
 
 [node name="area_mortal" type="Area2D" parent="."]
 position = Vector2(4, 0)
-scale = Vector2(1.15646, 1.32)
+scale = Vector2(0.996459, 1.32)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="area_mortal"]
 position = Vector2(-2, -1)

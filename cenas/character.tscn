@@ -146,3 +146,6 @@ frame_progress = 0.254923
 [node name="SomPassos" type="AudioStreamPlayer" parent="CharacterBody2D"]
 stream = ExtResource("4_hfy0t")
 parameters/looping = true
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+zoom = Vector2(1.35, 1.35)

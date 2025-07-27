@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=4 uid="uid://x3llk570xy68"]
+[gd_scene load_steps=28 format=4 uid="uid://x3llk570xy68"]
 
 [ext_resource type="Texture2D" uid="uid://jqoxum750htb" path="res://mapa_principal/Tileset Spring.png" id="1_n6npd"]
 [ext_resource type="Texture2D" uid="uid://dofxjty4xr5f0" path="res://mapa_principal/Road copiar.png" id="1_u0g1m"]
@@ -8,9 +8,11 @@
 [ext_resource type="Texture2D" uid="uid://dqvm2vcglmfsj" path="res://mapa_principal/Plates.png" id="5_pbvoc"]
 [ext_resource type="Texture2D" uid="uid://osjwtea5i48e" path="res://mapa_principal/Spring Crops.png" id="6_r1rqd"]
 [ext_resource type="PackedScene" uid="uid://de5ds5s2ivoki" path="res://cenas/character.tscn" id="7_ot40p"]
-[ext_resource type="Script" path="res://cenas/camera_2d.gd" id="9_oidef"]
 [ext_resource type="AudioStream" uid="uid://biykjmvu0esli" path="res://audios/No Fundo da Grota.mp3" id="10_dwh3w"]
 [ext_resource type="PackedScene" path="res://cenas/chimarrão.tscn" id="11_bwa4m"]
+[ext_resource type="FontFile" uid="uid://dpqkkpxwxwpbu" path="res://upheavtt.ttf" id="12_lbyyt"]
+[ext_resource type="Script" uid="uid://xwee12wnp035" path="res://cenas/hud_maneger.gd" id="12_uo12r"]
+[ext_resource type="PackedScene" uid="uid://dkh3gkeglgnjy" path="res://cenas/javali.tscn" id="14_ybvfs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k5eak"]
 texture = ExtResource("1_n6npd")
@@ -715,14 +717,6 @@ tile_set = SubResource("TileSet_ot40p")
 y_sort_enabled = true
 position = Vector2(298, 219)
 
-[node name="Camera2D" type="Camera2D" parent="Character" node_paths=PackedStringArray("_tilemap")]
-zoom = Vector2(1.5, 1.5)
-limit_smoothed = true
-position_smoothing_enabled = true
-position_smoothing_speed = 10.0
-script = ExtResource("9_oidef")
-_tilemap = NodePath("../../Chão terra")
-
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_dwh3w")
 volume_db = -11.244
@@ -732,3 +726,108 @@ parameters/looping = true
 [node name="Chimarrão" parent="." instance=ExtResource("11_bwa4m")]
 position = Vector2(965, 215)
 scale = Vector2(0.62, 0.62)
+
+[node name="hud" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="hud"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("12_uo12r")
+
+[node name="timer" type="Timer" parent="hud/Control"]
+autostart = true
+
+[node name="container" type="MarginContainer" parent="hud/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="kills_container" type="HBoxContainer" parent="hud/Control/container"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="titulo_kills" type="Label" parent="hud/Control/container/kills_container"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("12_lbyyt")
+theme_override_font_sizes/font_size = 30
+text = "KILLS: "
+
+[node name="contador_kill" type="Label" parent="hud/Control/container/kills_container"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("12_lbyyt")
+theme_override_font_sizes/font_size = 30
+text = "00"
+
+[node name="timer_container" type="HBoxContainer" parent="hud/Control/container"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+
+[node name="titulo_timer" type="Label" parent="hud/Control/container/timer_container"]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("12_lbyyt")
+theme_override_font_sizes/font_size = 30
+text = "TIME: "
+
+[node name="contador_timer" type="Label" parent="hud/Control/container/timer_container"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("12_lbyyt")
+theme_override_font_sizes/font_size = 30
+text = "00:00"
+
+[node name="enemies" type="Node2D" parent="."]
+
+[node name="javali" parent="enemies" instance=ExtResource("14_ybvfs")]
+position = Vector2(594, 494)
+
+[node name="javali2" parent="enemies" instance=ExtResource("14_ybvfs")]
+position = Vector2(964, 211)
+
+[node name="javali3" parent="enemies" instance=ExtResource("14_ybvfs")]
+position = Vector2(1668, 160)
+
+[node name="javali4" parent="enemies" instance=ExtResource("14_ybvfs")]
+position = Vector2(1487, 519)
+
+[node name="javali5" parent="enemies" instance=ExtResource("14_ybvfs")]
+position = Vector2(1952, 341)
+
+[node name="javali6" parent="enemies" instance=ExtResource("14_ybvfs")]
+position = Vector2(1315, 69)
+
+[node name="javali7" parent="enemies" instance=ExtResource("14_ybvfs")]
+position = Vector2(1799, 602)
+
+[node name="javali8" parent="enemies" instance=ExtResource("14_ybvfs")]
+position = Vector2(1265, 560)
+
+[node name="javali9" parent="enemies" instance=ExtResource("14_ybvfs")]
+position = Vector2(600, 239)
+
+[node name="javali10" parent="enemies" instance=ExtResource("14_ybvfs")]
+position = Vector2(2021, 61)
+
+[connection signal="timeout" from="hud/Control/timer" to="hud/Control" method="_on_timer_timeout"]
