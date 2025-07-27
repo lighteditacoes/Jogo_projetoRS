@@ -5,13 +5,13 @@ const _DIALOG_SCREEN: PackedScene = preload("res://cenas/dialog_screen.tscn")
 
 var _dialog_data: Dictionary = {
 	0: {
-		"faceset": "res://personagem/Gaucho_3.png",
+		"faceset": "res://personagem/ChadVoMewing.png",
 		"dialog": "Bah, piá, esses javalis tão destruindo nossa fazenda!",
 		"title": "Veio Fredolino"
 	},
 	
 	1: {
-		"faceset": "res://personagem/Gaucho_3.png",
+		"faceset": "res://personagem/ChadVoMewing.png",
 		"dialog": "Preciso que tu me ajude a acabar com eles… já tô meio enferrujado pra esse tipo de coisa.",
 		"title": "Veio Fredolino"
 	},
@@ -23,13 +23,13 @@ var _dialog_data: Dictionary = {
 	},
 	
 	3: {
-		"faceset": "res://personagem/Gaucho_3.png",
+		"faceset": "res://personagem/ChadVoMewing.png",
 		"dialog": "Confio em ti, guri.",
 		"title": "Veio Fredolino"
 	},
 	
 	4: {
-		"faceset": "res://personagem/Gaucho_3.png",
+		"faceset": "res://personagem/ChadVoMewing.png",
 		"dialog": "Vai com tudo!",
 		"title": "Veio Fredolino"
 	},

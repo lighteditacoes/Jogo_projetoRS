@@ -12,6 +12,7 @@ var quant_javali: int = 0
 @export var _animatedgun: AnimationPlayer = null
 @export var sprite_tiro: AnimatedSprite2D
 @export var _som_tiro: AudioStreamPlayer
+@export var _javali_morrendo: AudioStreamPlayer
 
 func _ready() -> void:
 	sprite.play("default")
@@ -55,6 +56,7 @@ func fire(direction: Vector2) -> void:
 		if corpo.is_in_group("enemy"):
 			print("Inimigo abatido: ", corpo.name)
 			corpo.queue_free()
+			_javali_morrendo.play()
 			quant_javali += 1
 			Globals.cont_kill = quant_javali
 

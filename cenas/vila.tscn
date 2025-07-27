@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://osjwtea5i48e" path="res://mapa_principal/Spring Crops.png" id="6_r1rqd"]
 [ext_resource type="PackedScene" uid="uid://de5ds5s2ivoki" path="res://cenas/character.tscn" id="7_ot40p"]
 [ext_resource type="AudioStream" uid="uid://biykjmvu0esli" path="res://audios/No Fundo da Grota.mp3" id="10_dwh3w"]
-[ext_resource type="PackedScene" path="res://cenas/chimarrão.tscn" id="11_bwa4m"]
+[ext_resource type="PackedScene" uid="uid://d3i6wn0v3fuw3" path="res://cenas/chimarrão.tscn" id="11_bwa4m"]
 [ext_resource type="FontFile" uid="uid://dpqkkpxwxwpbu" path="res://upheavtt.ttf" id="12_lbyyt"]
 [ext_resource type="Script" uid="uid://xwee12wnp035" path="res://cenas/hud_maneger.gd" id="12_uo12r"]
 [ext_resource type="PackedScene" uid="uid://dkh3gkeglgnjy" path="res://cenas/javali.tscn" id="14_ybvfs"]
