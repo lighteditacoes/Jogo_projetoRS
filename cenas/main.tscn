@@ -88,3 +88,6 @@ parameters/looping = true
 
 [node name="javali" parent="." instance=ExtResource("9_1yycb")]
 position = Vector2(827, 265)
+
+[node name="javali2" parent="." instance=ExtResource("9_1yycb")]
+position = Vector2(298, 205)
