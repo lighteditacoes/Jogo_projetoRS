@@ -1,9 +1,10 @@
-[gd_scene load_steps=22 format=3 uid="uid://de5ds5s2ivoki"]
+[gd_scene load_steps=23 format=3 uid="uid://de5ds5s2ivoki"]
 
 [ext_resource type="Script" uid="uid://bdxn568l2cc3f" path="res://character.gd" id="1_pjt0s"]
 [ext_resource type="Texture2D" uid="uid://35bix3e2j2wj" path="res://personagem/GauchoSemBracoCorrendo_1.png" id="3_3puat"]
 [ext_resource type="Texture2D" uid="uid://c2db7di327fc5" path="res://personagem/Gaucho_3.png" id="3_wfnr8"]
 [ext_resource type="AudioStream" uid="uid://dilh45hxjgipo" path="res://audios/passos.mp3" id="4_hfy0t"]
+[ext_resource type="Script" uid="uid://b4nwtdr4wtsp0" path="res://cenas/camera_2d.gd" id="5_y5ddj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pjt0s"]
 size = Vector2(23.3333, 7.5)
@@ -147,5 +148,10 @@ frame_progress = 0.254923
 stream = ExtResource("4_hfy0t")
 parameters/looping = true
 
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" node_paths=PackedStringArray("player") groups=["Camera"]]
+scale = Vector2(0.666667, 0.666667)
 zoom = Vector2(1.35, 1.35)
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
+script = ExtResource("5_y5ddj")
+player = NodePath("..")

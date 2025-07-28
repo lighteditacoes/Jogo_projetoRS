@@ -494,21 +494,21 @@ texture = ExtResource("1_n6npd")
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pu0lk"]
 texture = ExtResource("2_k5eak")
 0:0/0 = 0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-3.0576, -8, 8, -8, 8, 8, -3.59717, 8)
 1:0/0 = 0
 1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:0/0 = 0
-2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 2.69788, -8, 3.23746, 8, -8, 8)
 0:1/0 = 0
-0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-3.23746, -8, 2.69788, -8, 3.23746, 8, -2.69788, 8)
 2:1/0 = 0
-2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-3.23746, -8, 2.69788, -8, 3.23746, 8, -2.69788, 8)
 0:2/0 = 0
-0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-3.23746, -8, 8, -8, 8, 5.93534, -2.69788, 5.93534)
 1:2/0 = 0
-1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 5.93534, -8, 5.75548)
 2:2/0 = 0
-2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 3.23746, -8, 3.0576, 5.93534, -8, 5.57562)
 1:3/0 = 0
 1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:3/0 = 0
@@ -765,7 +765,7 @@ theme_override_constants/shadow_offset_x = 0
 theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("12_lbyyt")
 theme_override_font_sizes/font_size = 30
-text = "KILLS: "
+text = "ABATES: "
 
 [node name="contador_kill" type="Label" parent="hud/Control/container/kills_container"]
 layout_mode = 2
@@ -788,7 +788,7 @@ theme_override_constants/shadow_offset_x = 0
 theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("12_lbyyt")
 theme_override_font_sizes/font_size = 30
-text = "TIME: "
+text = "TEMPO: "
 
 [node name="contador_timer" type="Label" parent="hud/Control/container/timer_container"]
 layout_mode = 2

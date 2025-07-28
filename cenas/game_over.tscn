@@ -62,7 +62,7 @@ offset_right = 143.5
 offset_bottom = -24.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "RESTART?"
+text = "REINICIAR?"
 label_settings = SubResource("LabelSettings_5kvw5")
 
 [node name="Yes" type="Button" parent="."]
@@ -81,7 +81,7 @@ theme_type_variation = &"FlatButton"
 theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("3_poob8")
 theme_override_font_sizes/font_size = 81
-text = "YES"
+text = "SIM"
 flat = true
 
 [node name="No" type="Button" parent="."]
@@ -100,7 +100,7 @@ theme_type_variation = &"FlatButton"
 theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("3_poob8")
 theme_override_font_sizes/font_size = 81
-text = "NO"
+text = "NÃO"
 flat = true
 
 [connection signal="pressed" from="Yes" to="." method="_on_yes_pressed"]

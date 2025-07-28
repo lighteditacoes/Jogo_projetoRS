@@ -4,10 +4,14 @@ var DISTANCIA_FIXA = 21.0
 var _can_attack: bool = true
 var quant_javali: int = 0
 
+@onready var ParticulaSangue: PackedScene = preload("res://cenas/sangue.tscn")
+
 @onready var contador_kill: Label = $hud/Control/container/kills_container/contador_kill
 @onready var sprite = $Arma/AnimatedSprite2D
 @onready var sprite_perso = $CharacterBody2D/anim
 @onready var tiro_area = $Arma/TiroArea
+
+@onready var camera: Camera2D = get_tree().get_first_node_in_group("Camera")
 
 @export var _animatedgun: AnimationPlayer = null
 @export var sprite_tiro: AnimatedSprite2D
@@ -18,6 +22,7 @@ func _ready() -> void:
 	sprite.play("default")
 	sprite_tiro.play("default")
 	tiro_area.monitoring = true  # Garante que a área esteja monitorando
+	
 
 func _process(delta):
 	var player_pos = get_parent().global_position
@@ -45,6 +50,8 @@ func fire(direction: Vector2) -> void:
 	sprite.play("shoot")
 	_animatedgun.play("shoot")
 	sprite_tiro.play("shoot")
+	camera.trigger_shake()
+	
 	
 
 	await get_tree().process_frame  # Espera um frame para garantir atualização do Area2D
@@ -55,6 +62,10 @@ func fire(direction: Vector2) -> void:
 	for corpo in corpos:
 		if corpo.is_in_group("enemy"):
 			print("Inimigo abatido: ", corpo.name)
+			var sangue = ParticulaSangue.instantiate()
+			sangue.global_position = corpo.global_position
+			get_tree().current_scene.add_child(sangue)
+			sangue.emitting = true
 			corpo.queue_free()
 			_javali_morrendo.play()
 			quant_javali += 1

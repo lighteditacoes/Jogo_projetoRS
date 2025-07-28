@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bmex2ic61v5sc"]
+
+[node name="Sangue" type="CPUParticles2D"]
+emitting = false
+amount = 169
+one_shot = true
+explosiveness = 0.9
+emission_shape = 1
+emission_sphere_radius = 24.65
+spread = 144.4
+initial_velocity_min = 86.96
+initial_velocity_max = 358.7
+scale_amount_min = 2.0
+scale_amount_max = 3.0
+color = Color(1, 0, 0, 1)

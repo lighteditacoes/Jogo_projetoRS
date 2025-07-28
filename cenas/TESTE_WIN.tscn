@@ -1,4 +1,12 @@
-[gd_scene format=3 uid="uid://tw6r1dd6uun3"]
+[gd_scene load_steps=5 format=3 uid="uid://tw6r1dd6uun3"]
+
+[ext_resource type="Script" uid="uid://c6brt5eosx0kn" path="res://cenas/teste_win.gd" id="1_1i42p"]
+[ext_resource type="Texture2D" uid="uid://62t15304rs41" path="res://churras.jpg" id="1_ocuis"]
+[ext_resource type="FontFile" uid="uid://dpqkkpxwxwpbu" path="res://upheavtt.ttf" id="2_1i42p"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ocuis"]
+font = ExtResource("2_1i42p")
+font_size = 116
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -7,28 +15,39 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_1i42p")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -15.0
+offset_top = -48.0
+offset_right = 241.0
+offset_bottom = 256.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 1, 1, 1)
+scale = Vector2(0.85, 0.85)
+texture = ExtResource("1_ocuis")
 
 [node name="Label" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -216.0
-offset_top = -118.0
-offset_right = -153.0
-offset_bottom = -95.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(7, 7)
+layout_mode = 0
+offset_left = 238.0
+offset_top = 181.0
+offset_right = 708.0
+offset_bottom = 286.0
 text = "VITÓRIA"
+label_settings = SubResource("LabelSettings_ocuis")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 632.0
+offset_right = 1097.0
+offset_bottom = 700.0
+theme_override_fonts/font = ExtResource("2_1i42p")
+theme_override_font_sizes/font_size = 66
+text = "VOLTAR AO MENU PRINCIPAL"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
